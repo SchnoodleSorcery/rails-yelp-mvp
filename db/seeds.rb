@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-categories = %w(chinese italian japanese french belgian)
+categories = %w(Chinese Italian Japanese French Belgian)
 
 5.times do
   restaurant = Restaurant.new(

@@ -1,1 +1,11 @@
-
+<h1><%=@restaurant.name %></h1>
+<h1>Category: <%=@restaurant.category %></h1>
+<h1><%=@restaurant.address %></h1>
+<h1><%=@restaurant.phone_number %></h1>
+<button type="button" class="btn btn-outline-dark"><%= link_to "Write a review", new_restaurant_review_path(@restaurant) %></button>
+<%= link_to "Back to restaurant list", restaurants_path(@restaurant) %>
+<h2>Reviews:</h2>
+<% @restaurant.reviews.each do |review| %>
+  <h4><%= review.content %></h4>
+  <h4><%= review.rating %></h4>
+  <%end%>
